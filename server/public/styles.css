@@ -1,0 +1,87 @@
+/* CSS for header */
+header {
+    text-align: center;
+    background-color: #2C3E50;
+    padding: 20px;
+    color: #FFFFFF;
+  }
+  
+  .icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  h3 {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  
+  /* CSS for section */
+  section {
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  #addKoala h2,
+  #viewKoalas h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* CSS for input fields and button */
+  input[type="text"],
+  button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498DB;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  button:focus {
+    outline: none;
+  }
+  
+  input[type="text"]::placeholder {
+    color: #ccc;
+  }
+  
+  button {
+    width: 200px;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #2980B9;
+  }
+  
+  /* CSS for table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+  }
+  
