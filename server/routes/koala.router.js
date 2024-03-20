@@ -1,6 +1,6 @@
 const express = require("express");
 const koalaRouter = express.Router();
-const pool = require("./pool"); // Assuming pool.js is in the same directory
+const pool = require("./pool");
 
 // GET all Koalas
 koalaRouter.get("/", (req, res) => {
@@ -15,11 +15,10 @@ koalaRouter.get("/", (req, res) => {
     });
 });
 
-// POST a new Koala
+// POST
 koalaRouter.post("/koalas", (req, res) => {
   const { name, age, favorite_color, ready_to_transfer, notes } = req.body;
 
-  // Validate required fields
   if (
     !name ||
     !age ||
@@ -43,12 +42,11 @@ koalaRouter.post("/koalas", (req, res) => {
     });
 });
 
-// PUT (update) a Koala's ready_to_transfer status
+// PUT
 koalaRouter.put("/:id", (req, res) => {
   const koalaId = req.params.id;
   const readyForTransfer = req.body.ready_to_transfer;
 
-  // Validate input
   if (readyForTransfer === undefined) {
     return res.status(400).send("Missing 'ready_to_transfer' field");
   }
@@ -65,7 +63,7 @@ koalaRouter.put("/:id", (req, res) => {
     });
 });
 
-// DELETE a Koala
+// DELETE
 koalaRouter.delete("/:id", (req, res) => {
   const koalaId = req.params.id;
 
